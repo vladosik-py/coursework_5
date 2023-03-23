@@ -1,8 +1,6 @@
 from dataclasses import dataclass
-from typing import List
 from random import uniform
 import marshmallow_dataclass
-import marshmallow
 import json
 
 
@@ -35,7 +33,6 @@ class EquipmentData:
 
 
 class Equipment:
-
     def __init__(self):
         self.equipment = self._get_equipment_data()
 
@@ -72,4 +69,3 @@ class Equipment:
             data = json.load(file)
             equipment_schema = marshmallow_dataclass.class_schema(EquipmentData)
             return equipment_schema().load(data)
-

@@ -3,7 +3,6 @@ from abc import ABC, abstractmethod
 from equipment import Weapon, Armor
 from classes import UnitClass
 from random import randint
-from typing import Optional
 
 
 class BaseUnit(ABC):
