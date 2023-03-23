@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, render_template, request, url_for
 from werkzeug.utils import redirect
 
@@ -6,7 +8,8 @@ from classes import unit_classes
 from equipment import Equipment
 from unit import EnemyUnit, PlayerUnit
 
-app = Flask(__name__)
+template_dir = os.path.abspath('../templates')
+app = Flask(__name__, template_folder=template_dir)
 
 heroes = {
     "player": ...,
